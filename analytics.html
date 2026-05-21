@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>MovieWorld | Аналитика</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/3418/3418886.png">
+
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">MovieWorld</div>
+
+    <nav>
+
+        <a href="index.html" >
+            Басты бет
+        </a>
+
+        <a href="movie.html">
+            Кинолар
+        </a>
+        <a href="news.html">
+            Жаңалықтар
+        </a>
+       <a href="analytics.html" class="active">
+            Аналитика
+        </a>
+        <a href="contact.html" >
+            Байланыс
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+
+
+<section class="page-hero">
+
+    <div class="hero-overlay"></div>
+
+    <img
+    src="aaa.jpeg"
+    class="hero-bg">
+
+
+
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            ANALYTICS
+        </span>
+
+        <h1>
+            Кино индустриясының дамуы
+        </h1>
+
+        <p>
+            AI технологиялары кино әлемін
+            жаңа деңгейге шығаруда.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="analysis">
+
+    <h2>
+        Жасанды интеллект және кино
+    </h2>
+
+    <p>
+
+        Қазіргі таңда жасанды интеллект
+        кино индустриясында маңызды рөл атқарады.
+        AI технологиялары фильм постерлерін,
+        трейлерлерді, дыбыс эффектілерін және
+        визуалды анимацияларды автоматты түрде
+        жасауға мүмкіндік береді.
+
+    </p>
+
+
+
+
+
+    <p>
+
+        Streaming платформалар AI көмегімен
+        пайдаланушылардың қызығушылығын зерттеп,
+        жеке ұсыныстар береді.
+        Бұл Netflix, Disney+ және Plex сияқты
+        платформалардың дамуына әсер етті.
+
+    </p>
+
+
+
+
+
+    <p>
+
+        Болашақта AI толық фильм сценарийлерін,
+        анимацияларды және интерактивті
+        кино тәжірибелерін жасай алады.
+
+    </p>
+
+</section>
+<section class="movie-stats">
+
+    <h2>
+        Топ фильмдер рейтингі
+    </h2>
+
+
+
+
+
+    <button onclick="sortTable()">
+
+        Рейтинг бойынша сұрыптау
+
+    </button>
+
+
+
+
+
+    <table id="movieTable">
+
+        <tr>
+
+            <th>Фильм</th>
+
+            <th>Жанр</th>
+
+            <th>Рейтинг</th>
+
+        </tr>
+
+
+
+
+
+        <tr>
+
+            <td>Interstellar</td>
+
+            <td>Sci-Fi</td>
+
+            <td>8.7</td>
+
+        </tr>
+
+
+
+
+
+        <tr>
+
+            <td>Dune</td>
+
+            <td>Adventure</td>
+
+            <td>8.5</td>
+
+        </tr>
+
+
+
+
+
+        <tr>
+
+            <td>Batman</td>
+
+            <td>Action</td>
+
+            <td>8.2</td>
+
+        </tr>
+
+
+
+
+
+        <tr>
+
+            <td>Avatar</td>
+
+            <td>Fantasy</td>
+
+            <td>7.9</td>
+
+        </tr>
+
+    </table>
+
+</section>
+<section class="ai-agent">
+
+    <h2>
+        AI Кино Ұсынысы
+    </h2>
+
+    <p>
+        Жасанды интеллект сізге кино ұсынады
+    </p>
+
+
+
+
+
+    <button onclick="showRecommendation()">
+
+        AI Ұсыныс алу
+
+    </button>
+
+
+
+
+
+    <div id="ai-result">
+
+        Бүгін не көруді білмей тұрсыз ба?
+    </div>
+
+</section>
+<script>
+
+function sortTable(){
+
+    let table =
+    document.getElementById("movieTable");
+
+    let rows =
+    Array.from(table.rows).slice(1);
+
+
+
+
+
+    rows.sort((a,b)=>{
+
+        return b.cells[2].innerHTML
+        - a.cells[2].innerHTML;
+
+    });
+
+
+
+
+
+    rows.forEach(row=>{
+
+        table.appendChild(row);
+
+    });
+}
+function showRecommendation(){
+
+    const movies = [
+
+        "🎬 Interstellar — Ғарыштық саяхат",
+
+        "🔥 Batman — Қараңғы Gotham әлемі",
+
+        "🚀 Dune — Болашақ планетасы",
+
+        "😂 Deadpool — Көңілді экшн",
+
+        "🧠 Oppenheimer — Ғылыми драма"
+
+    ];
+
+
+
+
+
+    let random = Math.floor(
+        Math.random() * movies.length
+    );
+
+
+
+
+
+    document.getElementById("ai-result")
+    .innerHTML = movies[random];
+
+}
+function scrollToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+</script>
+<footer>
+
+    <h3>MovieWorld</h3>
+
+    <p>
+        Автор: Рзахан Ақжүніс және Жаңабай Жания
+    </p>
+
+    <p>
+        Пән: АКТ
+    </p>
+
+    <p>
+        Университет / Факультет
+    </p>
+
+    <p>
+        Мамандық:Ақпараттық қауіпсіздік және Математикалық статистика
+    </p>
+
+    <p>
+        © 2026 MovieWorld
+    </p>
+
+</footer>
+<button id="topBtn"
+onclick="scrollToTop()">
+
+    ↑
+
+</button>
+</body>
+</html>

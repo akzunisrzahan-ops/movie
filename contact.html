@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>MovieWorld | Тіркелу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/3418/3418886.png">
+
+</head>
+<body>
+<div class="login-popup" id="loginPopup">
+
+    <div class="login-box">
+
+        <h2>
+            MovieWorld Login
+        </h2>
+        <p class="login-text">
+
+    MovieWorld сайты туралы пікір қалдырыңыз ✨
+
+</p>
+
+
+
+
+
+        <input
+        type="email"
+
+        placeholder="Email">
+
+
+
+
+        <input
+        type="password"
+
+        placeholder="Құпия сөз">
+
+
+
+
+        <button onclick="closeLogin()">
+
+            Кіру
+
+        </button>
+
+    </div>
+
+</div>
+
+<header>
+
+    <div class="logo">MovieWorld</div>
+
+    <nav>
+
+        <a href="index.html" >
+            Басты бет
+        </a>
+
+        <a href="movie.html">
+            Кинолар
+        </a>
+        <a href="news.html">
+            Жаңалықтар
+        </a>
+       <a href="analytics.html" >
+            Аналитика
+        </a>
+        <a href="contact.html" class="active">
+            Байланыс
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section class="register-section">
+
+    <div class="register-box">
+
+        <h1>ТІРКЕЛУ</h1>
+
+        <p>
+            Кино әлеміне қосылыңыз
+        </p>
+
+        <form>
+
+            <input type="text"
+            placeholder="Атыңыз">
+
+            <input type="email"
+            placeholder="Email">
+
+            <input type="password"
+            placeholder="Құпия сөз">
+
+            <input type="password"
+            placeholder="Құпия сөзді қайталау">
+            <button onclick="registerUser()">
+
+              Тіркелу
+
+            </button>
+
+        </form>
+      <div id="registerMessage">
+     </div>
+
+    </div>
+
+</section>
+<section class="contact-about">
+
+    <h2>
+        MovieWorld туралы
+    </h2>
+
+    <p>
+
+        MovieWorld — кино және медиа әлеміне
+        арналған заманауи платформа.
+        Бұл сайтта фильмдер, трейлерлер,
+        аналитика және кино жаңалықтары
+        ұсынылады.
+
+    </p>
+
+    <p>
+
+        Пайдаланушылар сүйікті фильмдерін
+        таңдап, жаңалықтарды оқып,
+        AI көмекші арқылы ұсыныстар ала алады.
+
+    </p>
+
+</section>
+<section class="telegram-section">
+
+    <div class="telegram-card">
+
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+
+        <h1>MovieWorld Bot</h1>
+
+        <p>
+            Telegram арқылы кино ізде,
+            жанр таңда және movie recommendation ал 🎬
+        </p>
+
+        <a
+        href="https://t.me/media_and_films_bot"
+        target="_blank"
+
+        class="tg-btn">
+
+        🤖 Ботты ашу
+
+        </a>
+
+    </div>
+
+</section>
+<section class="contact-info">
+
+    <div class="info-card">
+
+        <h3>
+            📧 Email
+        </h3>
+
+        <p>
+            movieworld@gmail.com
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="info-card">
+
+        <h3>
+            📞 Телефон
+        </h3>
+
+        <p>
+            +7 702 128 83 17
+        </p>
+
+    </div>
+
+
+
+
+
+    <div class="info-card">
+
+        <h3>
+            📍 Мекенжай
+        </h3>
+
+        <p>
+            Алматы, Қазақстан
+        </p>
+
+    </div>
+
+</section>
+<script>
+
+function scrollToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+function registerUser(){
+
+    document.getElementById(
+    "registerMessage"
+
+    ).innerHTML =
+
+    "✅ Сіз сайтқа сәтті тіркелдіңіз!";
+}
+function closeLogin(){
+
+    document.getElementById(
+    "loginPopup"
+
+    ).style.display = "none";
+
+}
+
+</script>
+<footer>
+
+    <h3>MovieWorld</h3>
+
+    <p>
+        Автор: Рзахан Ақжүніс және Жаңабай Жания
+    </p>
+
+    <p>
+        Пән: АКТ
+    </p>
+
+    <p>
+        Университет / Факультет
+    </p>
+
+    <p>
+        Мамандық:Ақпараттық қауіпсіздік және Математикалық статистика
+    </p>
+
+    <p>
+        © 2026 MovieWorld
+    </p>
+
+</footer>
+<button id="topBtn"
+onclick="scrollToTop()">
+
+    ↑
+
+</button>
+</body>
+</html>
